@@ -1,4 +1,4 @@
-package com.cv.core.s09coresecurity.component.synchronous;
+package com.cv.core.s09coresecurity.component;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

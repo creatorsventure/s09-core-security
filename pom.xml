@@ -27,13 +27,6 @@
         <tag/>
         <url/>
     </scm>
-    <properties>
-        <java.version>21</java.version>
-        <maven.build.timestamp.format>ddMMyyyyHHmmss</maven.build.timestamp.format>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <bouncycastle.version>1.80</bouncycastle.version>
-        <jwt.version>0.11.5</jwt.version>
-    </properties>
     <distributionManagement>
         <repository>
             <id>github</id>
@@ -41,6 +34,33 @@
             <url>https://maven.pkg.github.com/creatorsventure/s09-core-security</url>
         </repository>
     </distributionManagement>
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/creatorsventure/*</url>
+        </repository>
+    </repositories>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.cv.bom</groupId>
+                <artifactId>b01-cv-bom</artifactId>
+                <version>0.0.3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <properties>
+        <java.version>21</java.version>
+        <maven.build.timestamp.format>ddMMyyyyHHmmss</maven.build.timestamp.format>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <bouncycastle.version>1.80</bouncycastle.version>
+        <jwt.version>0.11.5</jwt.version>
+        <google-auth-version>1.5.0</google-auth-version>
+        <google-zxing-version>3.5.3</google-zxing-version>
+        <spring-cloud.version>2024.0.1</spring-cloud.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -81,6 +101,21 @@
             <artifactId>jjwt-jackson</artifactId> <!-- for JSON parsing -->
             <version>${jwt.version}</version>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.warrenstrange</groupId>
+            <artifactId>googleauth</artifactId>
+            <version>${google-auth-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>${google-zxing-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>${google-zxing-version}</version>
         </dependency>
     </dependencies>
 

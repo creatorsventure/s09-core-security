@@ -1,4 +1,4 @@
-package com.cv.core.s09coresecurity.component.synchronous;
+package com.cv.core.s09coresecurity.component;
 
 import org.bouncycastle.pkcs.PKCS10CertificationRequest;
 

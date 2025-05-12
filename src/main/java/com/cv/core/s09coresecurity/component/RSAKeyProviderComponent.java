@@ -1,4 +1,4 @@
-package com.cv.core.s09coresecurity.component.synchronous;
+package com.cv.core.s09coresecurity.component;
 
 import com.cv.core.s09coresecurity.config.properties.CoreSecurityProperties;
 import com.cv.core.s09coresecurity.dto.KeyAliasConfigDto;
